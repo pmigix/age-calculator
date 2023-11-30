@@ -1,6 +1,6 @@
 # Frontend Mentor - Age calculator app solution
 
-This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Overview
 
@@ -18,3 +18,16 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
+
+### Screenshots
+
+![Desktop](./screenshots/desktop.png)
+![Mobile](./screenshots/mobile.png)
+
+### Links
+
+- Live Site URL: https://pmigix.github.io/age-calculator
+
+## Author
+
+- Frontend Mentor - [@pmigix](https://www.frontendmentor.io/profile/pmigix)
