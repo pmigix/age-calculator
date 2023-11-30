@@ -140,8 +140,11 @@ function calculateAge(day, month, year) {
         fullMonths = currentMonth+1 - month;
     }
 
-    if (currentDay <= day) {
+    if (currentDay < day) {
         fullDays = daysInEachMonth[month-1] + (currentDay - day);
+        if (currentMonth+1 > month) {
+            fullMonths--;
+        }
         if (fullDays === daysInEachMonth[month-1]) {
             fullYears++;
             fullMonths = 0;
