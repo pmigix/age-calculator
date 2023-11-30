@@ -3,24 +3,12 @@
     src: url(./assets/fonts/Poppins-Bold.ttf);
 }
 @font-face {
-    font-family: PoppinsBoldItalic;
-    src: url(./assets/fonts/Poppins-BoldItalic.ttf);
-}
-@font-face {
-    font-family: PoppinsExtraBold;
-    src: url(./assets/fonts/Poppins-ExtraBold.ttf);
-}
-@font-face {
     font-family: PoppinsExtraBoldItalic;
     src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
 }
 @font-face {
     font-family: PoppinsItalic;
     src: url(./assets/fonts/Poppins-Italic.ttf);
-}
-@font-face {
-    font-family: PoppinsRegular;
-    src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
 :root {
@@ -56,26 +44,29 @@ main {
 }
 ul {
     position: relative;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 2rem;
     border-bottom: 2px solid var(--light-grey);
-    padding: 0 7rem 2rem 0;
+    padding: 0 10rem 2rem 0;
 }
 button {
     position: absolute;
-    right: -20px;
-    top: 85px;
+    right: -10px;
+    top: 90px;
     background-color: var(--purple);
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-style: none;
     border-radius: 100%;
     cursor: pointer;
 }
+button:hover {
+    background-color: var(--off-black);
+    transition: all .3s ease-out;
+}
 hr, button {
     display: inline-block;
-}
-ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
 }
 label {
     color: var(--smokey-grey);
@@ -84,26 +75,79 @@ label {
     font-family: PoppinsBold;
 }
 input {
-    margin-top: .5rem;
+    margin-top: .25rem;
     font-size: 32px;
     font-family: PoppinsBold;
     border-radius: .5rem;
-    border: 1px solid var(--light-grey);
-    padding: .625rem;
-    width: 150px;
+    border: 2px solid var(--light-grey);
+    padding: 0.5rem .75rem;
+    width: 140px;
+    outline: none;
 }
 span {
     color: var(--purple);
 }
 p {
-    font-size: 100px;
+    font-size: 93px;
     line-height: 1.125em;
     font-family: PoppinsExtraBoldItalic;
     color: var(--off-black);
 }
+.message-day,
+.message-month,
+.message-year {
+    margin-top: .5rem;
+    height: .25rem;
+    font-size: 12px;
+    font-family: PoppinsItalic;
+    color: var(--light-red);
+}
 .attribution { 
-    text-align: center; 
+    text-align: center;
+    font-family: PoppinsBold;
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--purple)
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 2.5rem 1.25rem;
+    }
+    ul {
+        gap: 1rem;
+        margin-bottom: 3.25rem;
+        padding: 0 0 3.25rem 0;
+    }
+    ::placeholder {
+        font-size: 20px;
+    }
+    label {
+        font-size: 12px;
+        letter-spacing: .125rem;
+    }
+    input {
+        margin-top: .125rem;
+        font-size: 20px;
+        padding: .75rem;
+        width: 90px;
+    }
+    button {
+        right: 120px;
+        top: 115px;
+        padding: 1rem;
+    }
+    img {
+        width: 28px;
+        height: 26px;
+    }
+    .message-day,
+    .message-month,
+    .message-year {
+        max-width: 90px;
+        font-size: 10px;
+    }
+    p {
+        font-size: 50px;
+    }
 }
