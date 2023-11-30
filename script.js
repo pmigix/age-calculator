@@ -151,9 +151,35 @@ function calculateAge(day, month, year) {
         fullDays = currentDay - day;
     }
 
-    elements[2].outputField.textContent = fullYears;
-    elements[1].outputField.textContent = fullMonths;
-    elements[0].outputField.textContent = fullDays;
+    let yearInterval = setInterval(yearCounter, 75);
+    let monthInterval = setInterval(monthCounter, 75);
+    let dayInterval = setInterval(dayCounter, 75);
+    let years = 0, months = 0, days = 0;
+
+    function yearCounter() {
+        if (years == fullYears) {
+            clearInterval(yearInterval);
+        } else {
+            years++;
+            elements[2].outputField.textContent = years;
+        }
+    }
+    function monthCounter() {
+        if (months == fullMonths) {
+            clearInterval(monthInterval);
+        } else {
+            months++;
+            elements[1].outputField.textContent = months;
+        }
+    }
+    function dayCounter() {
+        if (days == fullDays) {
+            clearInterval(dayInterval);
+        } else {
+            days++;
+            elements[0].outputField.textContent = days;
+        }
+    }
 }
 
 function outputMessage(element, message) {
