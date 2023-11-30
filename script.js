@@ -161,24 +161,24 @@ function calculateAge(day, month, year) {
             clearInterval(yearInterval);
         } else {
             years++;
-            elements[2].outputField.textContent = years;
         }
+        elements[2].outputField.textContent = years;
     }
     function monthCounter() {
         if (months == fullMonths) {
             clearInterval(monthInterval);
         } else {
             months++;
-            elements[1].outputField.textContent = months;
         }
+        elements[1].outputField.textContent = months;
     }
     function dayCounter() {
         if (days == fullDays) {
             clearInterval(dayInterval);
         } else {
             days++;
-            elements[0].outputField.textContent = days;
         }
+        elements[0].outputField.textContent = days;
     }
 }
 
